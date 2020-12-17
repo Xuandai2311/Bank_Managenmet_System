@@ -56,16 +56,16 @@ void ManagerAdmin::openAccount()
 	string answ = "y";
 	while (answ == "y" || answ == "Y")
 	{
-		std::string accountid, customerid, Type, InterestRate, Balance;
+		std::string accountid, customerid, Type; float InterestRate, Balance;
 		cout << "\tEnter Customer ID: "; cin >> customerid;
 		cout << "Enter Account: "; cin >> accountid;
 		cout << "Enter Account Type Choose Saving (s) or Current (c): "; cin >> Type;
 		cout << "Enter Interest Rate: "; cin >> InterestRate;
 		cout << "Enter Amount For Deposit: "; cin >> Balance;
 		cout << endl;
-		Account ac(accountid, customerid, Type, InterestRate, Balance);
+		Account ac(std::string accountid, std::string customerid, std::string Type, float InterestRate,float Balance);
 		if (checkDataListCus(customerid)) {
-			ListCustomer.push_back(ac);
+			ListAccount.push_back(ac);
 		}
 		else {
 			cout << "Customer ID Doesn't Exist" << endl;
@@ -76,18 +76,65 @@ void ManagerAdmin::openAccount()
 
 void ManagerAdmin::depositMoney()
 {
-	std::string accountid, customerid, Type, InterestRate, Balance, Bal;
-	cout << "\tEnter Account Will You Be Depositing Into: "; cin >> accountid;
-	cout << "\tEnter The Amount You Want To Deposit: "; cin >> Bal;
-	Balance += Bal;
-	Account ac(accountid, customerid, Type, InterestRate, Balance);
-	if (checkDataListAcc(accountid)) {
-		ListAccount.push_back(ac);
+	string answ = "y";
+	while (answ == "y" || answ == "Y")
+	{
+		std::string accountid; float InterestRate, Balance, Bal;
+		cout << "\tEnter Account Will You Be Depositing Into: "; cin >> accountid;
+		cout << "\tEnter The Amount You Want To Deposit: "; cin >> Bal;
+		Balance += Bal;
+		Account ac(std::string accountid,float InterestRate, float Balance);
+		if (checkDataListAcc(accountid)) {
+			ListAccount.push_back(ac);
+		}
+		else {
+			cout << "Account ID Doesn't Exist" << endl;
+		}
+		cout << "\tYour Current Balance is: " << Balance << endl;
+		cout << "Do You Want To Continue? ? Yes = Y/No = N "; cin >> answ;
 	}
-	else {
-		cout << "Account ID Doesn't Exist" << endl;
+}
+
+void ManagerAdmin::withdrawal()
+{
+	string answ = "y";
+	while (answ == "y" || answ == "Y")
+	{
+		std::string accountid, customerid, Type; float InterestRate, Balance, Bal;
+		cout << "\tEnter Account You Want Withdrawal : "; cin >> accountid;
+		cout << "\tEnter The Amount You Want To withdrawal: "; cin >> Bal;
+		Balance -= Bal;
+		Account ac(std::string accountid,std::string customerid,std::string Type,float InterestRate,float Balance);
+		if (checkDataListAcc(accountid)) {
+			ListAccount.push_back(ac);
+		}
+		else {
+			cout << "Account ID Doesn't Exist" << endl;
+		}
+		cout << "\tYour Current Balance is: " << Balance << endl;
+		cout << "Do You Want To Continue? ? Yes = Y/No = N "; cin >> answ;
 	}
-	cout << "\tYour Current Balance is: " << Balance << endl;
+}
+
+void ManagerAdmin::transfersMoney()
+{
+	string answ = "y";
+	while (answ == "y" || answ == "Y")
+	{
+		std::string accountid, customerid, Type; float InterestRate, Balance, Bal;
+		cout << "\tEnter Account You Want Withdrawal : "; cin >> accountid;
+		cout << "\tEnter The Amount You Want To withdrawal: "; cin >> Bal;
+		Balance -= Bal;
+		Account ac(std::string accountid,std::string customerid,std::string Type,float InterestRate,float Balance);
+		if (checkDataListAcc(accountid)) {
+			ListAccount.push_back(ac);
+		}
+		else {
+			cout << "Account ID Doesn't Exist" << endl;
+		}
+		cout << "\tYour Current Balance is: " << Balance << endl;
+		cout << "Do You Want To Continue? ? Yes = Y/No = N "; cin >> answ;
+	}
 }
 
 

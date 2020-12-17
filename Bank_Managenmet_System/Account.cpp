@@ -1,6 +1,6 @@
 #include "Account.h"
 
-Account::Account(std::string accountid, std::string customerid, std::string InterestRate, std::string Balance, std::string Type)
+Account::Account(std::string accountid, std::string customerid, float InterestRate, float Balance, std::string Type)
 {
 	this->accountid = accountid;
 	this->customerid = customerid;
@@ -19,12 +19,12 @@ void Account::setCustomerID(std::string customerid)
 	Account::customerid = customerid;
 }
 
-void Account::setInterestRate(std::string InterestRate)
+void Account::setInterestRate(float InterestRate)
 {
 	Account::InterestRate = InterestRate;
 }
 
-void Account::setBalance(std::string Balance)
+void Account::setBalance(float Balance)
 {
 	Account::Balance = Balance;
 }
@@ -42,11 +42,11 @@ std::string Account::getCustomerID() const
 {
 	return customerid;
 }
-std::string Account::getInterestRate() const
+float Account::getInterestRate() const
 {
 	return InterestRate;
 }
-std::string Account::getBalance() const
+float Account::getBalance() const
 {
 	return Balance;
 }

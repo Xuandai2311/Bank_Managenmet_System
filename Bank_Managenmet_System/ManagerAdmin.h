@@ -1,5 +1,5 @@
 #pragma once
-#include<vector>
+#include <vector>
 #include <iostream>
 #include "Account.h"
 #include "Customer.h"
@@ -8,8 +8,8 @@
 class ManagerAdmin
 {
 private:
-	std::vector<Account> ListAccount;
-	std::vector<Customer> ListCustomer;
+	vector<Account> ListAccount;
+	vector<Customer> ListCustomer;
 	bool checkDataListAcc(std::string accountid);
 	bool checkDataListCus(std::string customerid);
 	CustomerService CS;
@@ -19,8 +19,8 @@ public:
 	void openCustomer();
 	void openAccount();
 	void depositMoney();
-	//void withdrawal();
-	//void transfersMoney();
+	void withdrawal();
+	void transfersMoney();
 	//void PrintLOG();
 };
 
