@@ -72,8 +72,8 @@ void ManagerAll::openMangerAdmin()
     case 1: mngAd.openCustomer(); system("pause"); openMangerAdmin(); break;
     case 2: mngAd.openAccount(); system("pause"); openMangerAdmin(); break;
     case 3: mngAd.depositMoney();  openMangerAdmin(); break;
-    case 4: mngAd.withdrawal(); system("pause"); openMangerAdmin(); break;
-    case 5: mngAd.transfersMoney(); openMangerAdmin(); break;
+    //case 4: mngAd.withdrawal(); system("pause"); openMangerAdmin(); break;
+    //case 5: mngAd.transfersMoney(); openMangerAdmin(); break;
     case 6: system("CLS"); Wellcome(); break;
     case 7: exit(0);
     default:
