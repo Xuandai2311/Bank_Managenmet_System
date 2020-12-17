@@ -8,9 +8,10 @@ class ManagerAll
 private:
 	ManagerCustomer mngCus;
 	ManagerAdmin mngAd;
-	void openMangerCustomer();
-	void openMangerAdmin();
+
 public:
 	void Wellcome();
+	void openMangerCustomer();
+	void openMangerAdmin();
 };
 

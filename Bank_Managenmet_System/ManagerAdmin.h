@@ -2,19 +2,25 @@
 #include<vector>
 #include <iostream>
 #include "Account.h"
+#include "Customer.h"
+#include "ManagerAll.h"
+#include "CustomerService.h"
 class ManagerAdmin
 {
 private:
+	std::vector<Account> ListAccount;
 	std::vector<Customer> ListCustomer;
-	bool checkDataList(std::string customerid);
+	bool checkDataListAcc(std::string accountid);
+	bool checkDataListCus(std::string customerid);
+	CustomerService CS;
+	ManagerAll mngAll;
 public:
-	ManagerAdmin();
-	void showlistCustomer();
-	void findCustomer();
-	void addCustomer();
-	void editCustomer();
-	void deleteCustomer();
-	void gotomain();
-	void PrintLOG();
+	//ManagerAdmin();
+	void openCustomer();
+	void openAccount();
+	void depositMoney();
+	//void withdrawal();
+	//void transfersMoney();
+	//void PrintLOG();
 };
 

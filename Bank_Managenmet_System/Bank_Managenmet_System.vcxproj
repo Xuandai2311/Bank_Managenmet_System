@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Account.cpp" />
+    <ClCompile Include="CustomerService.cpp" />
     <ClCompile Include="Customer.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="ManagerAdmin.cpp" />
@@ -149,6 +150,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Account.h" />
+    <ClInclude Include="CustomerService.h" />
     <ClInclude Include="Customer.h" />
     <ClInclude Include="ManagerAdmin.h" />
     <ClInclude Include="ManagerAll.h" />

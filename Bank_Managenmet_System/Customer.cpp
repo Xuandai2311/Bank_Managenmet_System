@@ -1,6 +1,6 @@
 #include "Customer.h"
 
-Customer::Customer(std::string id, std::string name, std::string address, std::string phone, std::string email)
+Customer::Customer(std::string customerid, std::string name, std::string address, std::string phone, std::string email)
 {
 	this->customerid = customerid;
 	this->name = name;
@@ -9,7 +9,7 @@ Customer::Customer(std::string id, std::string name, std::string address, std::s
 	this->email = email;
 }
 
-void Customer::setCustomerID(std::string accountid)
+void Customer::setCustomerID(std::string customerid)
 {
 	Customer::customerid = customerid;
 }

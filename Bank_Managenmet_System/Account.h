@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 #include "Customer.h"
-class Account
+class Account :public Customer
 {
 private:
 	std::string accountid, customerid, InterestRate, Balance, Type;

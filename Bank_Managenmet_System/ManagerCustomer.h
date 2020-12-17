@@ -8,12 +8,12 @@ private:
 	std::vector<Account> listAccount;
 	bool checkDataList(std::string id);
 public:
-	ManagerCustomer();
+	//ManagerCustomer();
 	void showListAccount();
-	void showbalances();
-	void transactions();
-	void withdraw();
-	void gotomain();
-	void PrintLOG();
+	//void showbalances();
+	//void transactions();
+	//void withdraw();
+	//void gotomain();
+	//void PrintLOG();
 };
 
